@@ -1,6 +1,9 @@
 <script>
+	// @ts-nocheck
+
 	import { events } from '../eventData';
 	import { categories } from '../eventData.js';
+	import { blur } from 'svelte/transition';
 	import Event from './Event.svelte';
 	import Icon from '$lib/filter.svg';
 
@@ -34,8 +37,8 @@
 <main>
 	<aside class="layout__left">
 		<fieldset>
-			<legend
-				><img src={Icon} class="icon" alt="" />
+			<legend>
+				<img src={Icon} class="icon__filter" alt="" />
 				Filter events
 			</legend>
 
@@ -45,12 +48,13 @@
 				<div class="filter__option">
 					<label class="label" for={category}>{category}</label>
 					<input
-						bind:group={eventType}
 						type="checkbox"
 						value={category}
 						data-name={category}
 						id={category}
+						class="filter__checkbox"
 						on:click={filterSelection}
+						bind:group={eventType}
 					/>
 				</div>
 			{/each}
@@ -72,19 +76,19 @@
 			<hr />
 
 			<Event>
-				{#each events as { name, date, client, url, keyword, descr }}
+				{#each events as { name, date, client, url, keyword, desc }}
 					{#if selectedNames.includes('all') || selectedNames.includes(keyword)}
-						<ul class="show column">
+						<ul class="show column" transition:blur={{ amount: 10 }}>
 							<li class="content">
 								<!-- Decorative image -->
-								<img src={url} alt class="content__img" />
+								<img src={url} alt="" class="content__img" />
 								<div class="content__event">
 									<h2 class="content__heading">{name}</h2>
 									<p class="content__date">{date}</p>
 								</div>
 
 								<h3 class="content__client">{client}</h3>
-								<p class="content__paragraph">{descr}</p>
+								<p class="content__paragraph">{desc}</p>
 							</li>
 						</ul>
 					{/if}
@@ -97,7 +101,7 @@
 <style>
 	.outerwrapper {
 		background: var(--lightGrey);
-		border-radius: 2px;
+		border-radius: var(--borderRadius);
 		padding: 1rem;
 	}
 
@@ -120,17 +124,24 @@
 	hr {
 		border: 0;
 		height: 0;
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
-		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		border-top: 1px solid var(--darkerGrey);
+		border-bottom: 1px solid var(--lightGrey);
+		opacity: 0.3;
 	}
 
 	main {
-		max-width: 80vw;
+		max-width: 80%;
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
 		justify-content: center;
 		margin: 5rem auto 0 auto;
+	}
+
+	.orders {
+		padding: 1rem;
+		background: var(--white);
+		border-radius: var(--borderRadius);
 	}
 
 	.column {
@@ -145,11 +156,51 @@
 		padding: 1rem;
 		background: var(--white);
 		margin-right: 3%;
-		border-radius: 0.5rem;
+		border-radius: var(--borderRadius);
 		border: 1px solid var(--mediumGrey);
 	}
 
+	.filter__checkbox {
+		appearance: none;
+		background-color: var(--white);
+		margin: 0;
+		font: inherit;
+		color: var(--black);
+		width: 2rem;
+		height: 2rem;
+		border: 0.15em solid var(--black);
+		border-radius: 0.15em;
+		transform: translateY(-0.075em);
+		display: grid;
+		place-content: center;
+	}
+
+	.filter__checkbox::before {
+		content: '';
+		width: 1em;
+		height: 1em;
+		clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+		transform: scale(0);
+		transform-origin: bottom left;
+		transition: 120ms transform ease-in-out;
+		box-shadow: inset 1em 1em var(--darkerGrey);
+	}
+
+	.filter__checkbox:checked::before {
+		transform: scale(1);
+	}
+
+	.filter__checkbox:focus {
+		outline: max(2px, 0.15em) solid var(--black);
+		outline-offset: max(2px, 0.15em);
+	}
+
+	.filter__checkbox:hover {
+		outline: max(4px, 0.35em) solid var(--green);
+	}
+
 	.layout__right {
+		/* TODO: Introduce grid system */
 		width: 83%;
 		border: 1px solid var(--mediumGrey);
 	}
@@ -158,7 +209,7 @@
 		content: '';
 		width: 56px;
 		height: 50px;
-		background-image: url(mark.png);
+		background-image: url(/mark.png);
 		background-repeat: no-repeat;
 		background-size: 56px 50px;
 		background-position: 50%;
@@ -178,7 +229,7 @@
 	legend {
 		font-family: 'Coustard', serif;
 		font-size: 1.2rem;
-		border-radius: 20%;
+		border-radius: var(--borderRadius);
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -208,7 +259,7 @@
 		margin-top: 1rem;
 	}
 
-	.icon {
+	.icon__filter {
 		width: 2rem;
 		margin-right: 0.5rem;
 		margin-top: 0.4rem;
@@ -218,7 +269,7 @@
 		background-color: var(--white);
 		margin: 0.5rem 0;
 		padding: 0.5rem;
-		border-radius: 5px;
+		border-radius: var(--borderRadius);
 		width: 100%;
 		box-shadow: 1px 1px 2.5px var(--mediumGrey);
 		flex-direction: row;
@@ -227,13 +278,17 @@
 		align-content: flex-start;
 		align-items: center;
 	}
+
+	.content:hover {
+		outline: max(4px, 0.35em) solid var(--green);
+	}
 	.content__heading {
 		font-size: 1rem;
 		margin: 0;
 	}
 	.content__img {
 		width: 15%;
-		border-radius: 2px;
+		border-radius: var(--borderRadius);
 		aspect-ratio: auto;
 		border: 1px solid var(--mediumGrey);
 	}
@@ -252,7 +307,6 @@
 	.content__paragraph {
 		width: 27%;
 		font-size: 0.8rem;
-		/* number of lines to show limited to 2 */
 		word-break: break-word;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -264,11 +318,5 @@
 	/* The "show" class is added to the filtered elements */
 	.show {
 		display: flex;
-	}
-
-	.orders {
-		padding: 1rem;
-		background: var(--white);
-		border-radius: 0.5rem;
 	}
 </style>

@@ -5,7 +5,7 @@ export const events = [
         client: "Elevate Solutions",
         url: "event__summer.jpeg",
         keyword: "summer",
-        descr: "Escape to a tropical paradise at our Summer Spectacular!"
+        desc: "Escape to a tropical paradise at our Summer Spectacular!"
     },
     {
         name: "Christmas Party",
@@ -13,7 +13,7 @@ export const events = [
         client: "Elevate Solutions",
         url: "event__xmas.jpeg",
         keyword: "xmas",
-        descr: "Merry and bright! Experience the joy of the holidays at our special Christmas event."
+        desc: "Merry and bright! Experience the joy of the holidays at our special Christmas event."
     },
     {
         name: "Half Marathon",
@@ -21,7 +21,7 @@ export const events = [
         client: "Elevate Solutions",
         url: "event__marathon.jpeg",
         keyword: "marathon",
-        descr: "Calling all runners! Test your limits in our scenic half marathon event."
+        desc: "Calling all runners! Test your limits in our scenic half marathon event."
     },
     {
         name: "Christmas Party",
@@ -29,7 +29,7 @@ export const events = [
         client: "Essence Boutique",
         url: "event__xmas.jpeg",
         keyword: "xmas",
-        descr: "Merry and bright! Experience the joy of the holidays at our special Christmas event."
+        desc: "Merry and bright! Experience the joy of the holidays at our special Christmas event."
     },
     {
         name: "Christmas Party",
@@ -37,7 +37,7 @@ export const events = [
         client: "Nimbus Technologies",
         url: "event__xmas.jpeg",
         keyword: "xmas",
-        descr: "Merry and bright! Experience the joy of the holidays at our special Christmas event."
+        desc: "Merry and bright! Experience the joy of the holidays at our special Christmas event."
     },
     {
         name: "Christmas Party",
@@ -45,7 +45,7 @@ export const events = [
         client: "Bloom Florals",
         url: "event__xmas.jpeg",
         keyword: "xmas",
-        descr: "Merry and bright! Experience the joy of the holidays at our special Christmas event."
+        desc: "Merry and bright! Experience the joy of the holidays at our special Christmas event."
     },
     {
         name: "Half Marathon",
@@ -53,7 +53,7 @@ export const events = [
         client: "Essence Boutique",
         url: "event__marathon.jpeg",
         keyword: "marathon",
-        descr: "Calling all runners! Test your limits in our scenic half marathon event."
+        desc: "Calling all runners! Test your limits in our scenic half marathon event."
     },
     {
         name: "Half Marathon",
@@ -61,7 +61,7 @@ export const events = [
         client: "Nimbus Technologies",
         url: "event__marathon.jpeg",
         keyword: "marathon",
-        descr: "Calling all runners! Test your limits in our scenic half marathon event."
+        desc: "Calling all runners! Test your limits in our scenic half marathon event."
     },
     {
         name: "Half Marathon",
@@ -69,7 +69,7 @@ export const events = [
         client: "Bloom Florals",
         url: "event__marathon.jpeg",
         keyword: "marathon",
-        descr: "Calling all runners! Test your limits in our scenic half marathon event."
+        desc: "Calling all runners! Test your limits in our scenic half marathon event."
     },
     {
         name: "Half Marathon",
@@ -77,7 +77,7 @@ export const events = [
         client: "Bloom Florals",
         url: "event__marathon.jpeg",
         keyword: "marathon",
-        descr: "Calling all runners! Test your limits in our scenic half marathon event."
+        desc: "Calling all runners! Test your limits in our scenic half marathon event."
     },
     {
         name: "Half Marathon",
@@ -85,7 +85,7 @@ export const events = [
         client: "Bloom Florals",
         url: "event__marathon.jpeg",
         keyword: "marathon",
-        descr: "Calling all runners! Test your limits in our scenic half marathon event."
+        desc: "Calling all runners! Test your limits in our scenic half marathon event."
     },
     {
         name: "Half Marathon",
@@ -93,7 +93,7 @@ export const events = [
         client: "Bloom Florals",
         url: "event__marathon.jpeg",
         keyword: "marathon",
-        descr: "Calling all runners! Test your limits in our scenic half marathon event."
+        desc: "Calling all runners! Test your limits in our scenic half marathon event."
     },
     {
         name: "Half Marathon",
@@ -101,7 +101,7 @@ export const events = [
         client: "Bloom Florals",
         url: "event__marathon.jpeg",
         keyword: "marathon",
-        descr: "Calling all runners! Test your limits in our scenic half marathon event."
+        desc: "Calling all runners! Test your limits in our scenic half marathon event."
     },
     {
         name: "Half Marathon",
@@ -109,14 +109,14 @@ export const events = [
         client: "Bloom Florals",
         url: "event__marathon.jpeg",
         keyword: "marathon",
-        descr: "Calling all runners! Test your limits in our scenic half marathon event."
+        desc: "Calling all runners! Test your limits in our scenic half marathon event."
     }, {
         name: "Half Marathon",
         date: "13:00, 15th September 2023",
         client: "Bloom Florals",
         url: "event__marathon.jpeg",
         keyword: "marathon",
-        descr: "Calling all runners! Test your limits in our scenic half marathon event."
+        desc: "Calling all runners! Test your limits in our scenic half marathon event."
     },
     {
         name: "Half Marathon",
@@ -124,7 +124,7 @@ export const events = [
         client: "Bloom Florals",
         url: "event__marathon.jpeg",
         keyword: "marathon",
-        descr: "Calling all runners! Test your limits in our scenic half marathon event."
+        desc: "Calling all runners! Test your limits in our scenic half marathon event."
     },
     {
         name: "Half Marathon",
@@ -132,14 +132,14 @@ export const events = [
         client: "Bloom Florals",
         url: "event__marathon.jpeg",
         keyword: "marathon",
-        descr: "Calling all runners! Test your limits in our scenic half marathon event."
+        desc: "Calling all runners! Test your limits in our scenic half marathon event."
     }, {
         name: "Half Marathon",
         date: "13:00, 15th September 2023",
         client: "Bloom Florals",
         url: "event__marathon.jpeg",
         keyword: "marathon",
-        descr: "Calling all runners! Test your limits in our scenic half marathon event."
+        desc: "Calling all runners! Test your limits in our scenic half marathon event."
     },
 ];
 
