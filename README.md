@@ -1,8 +1,50 @@
-# create-svelte
+# Ticket Taylor: technical test
+
+Design and build an event selection drop down for Order search
+
+## 3 hours
+
+Event organisers want to filter their customer orders by the event(s) the customer purchased for. To make this easy we want to design and build a simple event selector dropdown that allows the event organiser to select between one and many events.
+A list of events could be:
+
+- Summer Party – 15:00 7th July 2023
+- Christmas Party – 19:00 18th Dec 2023 Half
+- Marathon – 13:00 15th Sept 2024
+
+Please build a blank page with a simple form containing:
+
+- An input that allows you to select zero, one or many events
+- A submit button.
+- Clicking the submit button should post the selected IDs as a comma separated list.
+
+We will be judging the result on:
+
+- User experience
+- Aesthetics
+- Functional
+- Cleanliness of code
+
+It would be a bonus if you can demonstrate the experience for those who have hundreds of events. You can use jQuery or generic JS helpers, but not implement a library that already does dropdowns. We would like you to ideally spend no more than 3 hours on the task.
+
+Please share your solution via a github link or zip.
+
+On the aesthetics question - its been left deliberately vague - although it is often a good choice to make it look similar to current brand identity.
+
+### Design link
+
+[FigJam Design Link](https://www.figma.com/file/zlAlZNys72W27nQbRlGKAt/Ticket-Taylor?type=whiteboard&node-id=0%3A1&t=OZSLrt8siKvW7Gbf-1)
+
+### Development link
+
+[View project](https://preeminent-cascaron-6fc63d.netlify.app/)
+
+---
+
+### create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Creating a project
+#### Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
 
@@ -14,7 +56,7 @@ npm create svelte@latest
 npm create svelte@latest my-app
 ```
 
-## Developing
+#### Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
@@ -25,7 +67,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+#### Building
 
 To create a production version of your app:
 
