@@ -61,7 +61,7 @@
 		</fieldset>
 	</aside>
 
-	<div class="layout__right orders">
+	<section class="layout__right orders">
 		<h1 class="layout__right-heading">Orders</h1>
 		<p class="layout__right-para">Event(s) and description</p>
 
@@ -95,7 +95,7 @@
 				{/each}
 			</Event>
 		</div>
-	</div>
+	</section>
 </main>
 
 <style>
