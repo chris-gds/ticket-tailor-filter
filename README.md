@@ -2,7 +2,7 @@
 
 Design and build an event selection drop down for Order search
 
-## 3 hours
+## 3 hours (suggested time frame)
 
 Event organisers want to filter their customer orders by the event(s) the customer purchased for. To make this easy we want to design and build a simple event selector dropdown that allows the event organiser to select between one and many events.
 A list of events could be:
