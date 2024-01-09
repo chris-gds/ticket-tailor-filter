@@ -32,7 +32,7 @@ On the aesthetics question - its been left deliberately vague - although it is 
 
 ### Design link
 
-[FigJam Design Link](https://www.figma.com/file/zlAlZNys72W27nQbRlGKAt/Ticket-Taylor?type=whiteboard&node-id=0%3A1&t=OZSLrt8siKvW7Gbf-1)
+[removed]
 
 ### Development link
 
